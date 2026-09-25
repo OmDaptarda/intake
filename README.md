@@ -1,6 +1,6 @@
-# Coach Om Intake
+# Coaching Intake
 
-Client assessment for Om Daptardar's powerlifting and fitness coaching.
+Client assessment for powerlifting and fitness coaching.
 Clients fill in basics, lifestyle, a PAR-Q style health check, injuries, goals, lifts and
 training setup. Each finished assessment is saved as one row in a Google Sheet
 (download it as Excel any time: File > Download > Microsoft Excel).
@@ -12,7 +12,7 @@ apps-script/Code.gs   the Google Sheet script that receives submissions
 
 ## 1. Connect the Google Sheet (about 5 minutes)
 
-1. Go to **sheets.new** and name the sheet something like `Coach Om clients`.
+1. Go to **sheets.new** and name the sheet something like `Coaching clients`.
 2. In the sheet: **Extensions > Apps Script**.
 3. Delete what's in `Code.gs`, paste in everything from `apps-script/Code.gs`, click **Save**.
    (Optional: put your email in `NOTIFY_EMAIL` to get an email for each new client.)

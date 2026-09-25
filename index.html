@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Client assessment for Om Daptardar's powerlifting and fitness coaching.">
+<meta name="description" content="Client assessment for powerlifting and fitness coaching.">
 <meta name="theme-color" content="#141A21">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='14.5' width='28' height='3' rx='1' fill='%238C939C'/%3E%3Crect x='5' y='5' width='4' height='22' rx='1' fill='%23D0262C'/%3E%3Crect x='23' y='5' width='4' height='22' rx='1' fill='%23D0262C'/%3E%3C/svg%3E">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Coach Om Intake</title>
+<title>Coaching Intake</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&display=swap">
@@ -63,7 +63,7 @@ body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--body);-webkit
 button{font:inherit;color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:24px;padding-block:28px 72px;display:grid;grid-template-columns:330px minmax(0,1fr);gap:32px;align-items:start}
 .side{display:grid;gap:16px}
-@media (min-width:901px) and (min-height:860px){.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px)}}
+@media (min-width:901px) and (min-height:1020px){.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px)}}
 @media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);padding-inline:16px;gap:20px;padding-block:16px 56px}}
 
 /* coach card */
@@ -71,15 +71,31 @@ button{font:inherit;color:inherit}
 .eyebrow{margin:0;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .coach .eyebrow{color:var(--plat-ink-2)}
 .coach h1{margin:0;font:800 46px/.92 var(--display);text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
-.coach-role{margin:0;color:var(--plat-ink-2);font-size:15px}
-.attempts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.3fr);border:1px solid var(--plat-line);border-radius:6px;overflow:hidden}
-.att{padding:10px 10px 9px;display:grid;gap:4px;border-right:1px solid var(--plat-line);min-width:0}
-.att:last-child{border-right:0;background:var(--plat-2)}
-.att-l{font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--plat-ink-2)}
-.att-v{font:800 32px/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:.01em}
-.att-cap{margin:-6px 0 0;font:400 11px var(--mono);color:var(--plat-ink-2);letter-spacing:.04em}
-.mission{margin:0;font-size:15px;line-height:1.55}
-.mission b{font-weight:600}
+.creds{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:9px}
+.creds li{display:grid;grid-template-columns:8px minmax(0,1fr);gap:11px;align-items:center;font-size:15px;line-height:1.3}
+.creds li::before{content:"";width:8px;height:22px;border-radius:2px;background:var(--pc)}
+.cost{border:1px solid var(--plat-line);border-radius:8px;padding:13px 12px 12px;display:grid;gap:10px;background:var(--plat-2)}
+.cost-q{margin:0;font-size:14px;line-height:1.45;color:var(--plat-ink-2)}
+.cost-q b{color:var(--plat-ink);font-weight:600}
+.cost-seg{display:flex;gap:6px}
+.cost-seg button,.pain-tabs button{min-height:36px;padding:0 10px;border-radius:6px;border:1px solid var(--plat-line);background:transparent;color:var(--plat-ink);font:600 13px var(--body);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.cost-seg button{flex:1;padding:0 4px;white-space:nowrap;min-width:0}
+.cost-seg button:hover,.pain-tabs button:hover{border-color:var(--plat-ink-2)}
+.cost-seg button[aria-pressed="true"]{background:var(--plat-ink);color:var(--plat);border-color:var(--plat-ink)}
+.cost-num{font:800 34px/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:.01em;color:#FF6B6F}
+.cost-sub{margin:-4px 0 0;font-size:13px;color:var(--plat-ink-2)}
+.pains{display:grid;gap:9px}
+.pains-q{margin:0;font-size:14px;color:var(--plat-ink-2)}
+.pain-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.pain-tabs button{border-radius:999px;padding:0 13px}
+.pain-tabs button[aria-pressed="true"]{background:var(--p25);border-color:var(--p25);color:#fff}
+.pain-body{margin:0;font-size:14.5px;line-height:1.45;min-height:3em}
+.pain-body.swap{animation:fadeUp .25s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.fix{margin:0;padding-top:12px;border-top:1px solid var(--plat-line);font-size:15px;line-height:1.5;font-weight:500}
+.phone{display:flex;gap:8px;max-width:330px}
+.phone .in{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.phone .in-code{max-width:78px;flex:none;text-align:center}
 
 /* progress */
 .loadcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 14px 12px;display:grid;gap:10px}
@@ -253,17 +269,36 @@ details summary{cursor:pointer;font-weight:600;margin-bottom:10px}
 <div class="wrap">
   <aside class="side">
     <section class="coach" aria-labelledby="coachName">
-      <p class="eyebrow">Your coach</p>
-      <h1 id="coachName">Om Daptardar</h1>
-      <p class="coach-role">Powerlifter · Multiple university-level meet wins</p>
-      <div class="attempts" aria-label="Personal bests in kilograms">
-        <div class="att" aria-label="Squat 215"><span class="att-l">SQ</span><span class="att-v">215</span></div>
-        <div class="att" aria-label="Bench press 140"><span class="att-l">BP</span><span class="att-v">140</span></div>
-        <div class="att" aria-label="Deadlift 240"><span class="att-l">DL</span><span class="att-v">240</span></div>
-        <div class="att"><span class="att-l">Total</span><span class="att-v">595</span></div>
+      <p class="eyebrow">Powerlifting coaching</p>
+      <h1 id="coachName">Your coach</h1>
+      <ul class="creds">
+        <li style="--pc:var(--p25)">Competed in multiple powerlifting meets</li>
+        <li style="--pc:var(--p20)">Won university-level competitions</li>
+        <li style="--pc:var(--p15)">Coached by elite powerlifting coaches</li>
+      </ul>
+
+      <div class="cost" aria-labelledby="costQ">
+        <p class="cost-q" id="costQ">Coaching like that in India costs <b>₹12,000 to ₹15,000 a month</b>. How long would you need a coach?</p>
+        <div class="cost-seg" role="group" aria-label="Coaching length">
+          <button type="button" data-months="3" aria-pressed="false">3 months</button>
+          <button type="button" data-months="6" aria-pressed="true">6 months</button>
+          <button type="button" data-months="12" aria-pressed="false">1 year</button>
+        </div>
+        <div class="cost-num" id="costNum" aria-live="polite">₹72,000–90,000</div>
+        <p class="cost-sub" id="costSub">for 6 months of coaching. Most beginners can't pay that.</p>
       </div>
-      <p class="att-cap">Personal bests, kg</p>
-      <p class="mission">I learned from elite powerlifting coaches. That kind of coaching in India runs <b>₹12,000 to ₹15,000 a month</b>, and most beginners can't pay that, so they end up guessing, stalling, or getting hurt. I'm building this so beginners get the same structure at a price they can actually afford.</p>
+
+      <div class="pains">
+        <p class="pains-q">So most beginners end up&hellip;</p>
+        <div class="pain-tabs" role="group" aria-label="What happens without a coach">
+          <button type="button" data-pain="guess" aria-pressed="true">Guessing</button>
+          <button type="button" data-pain="stall" aria-pressed="false">Stalling</button>
+          <button type="button" data-pain="hurt" aria-pressed="false">Getting hurt</button>
+        </div>
+        <p class="pain-body" id="painBody" aria-live="polite">Random programs from YouTube and Instagram, with no plan for how to progress.</p>
+      </div>
+
+      <p class="fix">That's why I'm building this: the same structure I was coached with, at a price beginners can actually afford.</p>
     </section>
 
     <section class="loadcard" aria-label="Progress">
@@ -311,6 +346,7 @@ const STEPS=[
    sections:[{ id:'about', title:null, fields:[
      {id:'units', type:'segmented', label:'Units', required:true, options:[{v:'metric',l:'Metric (kg, cm)'},{v:'imperial',l:'Imperial (lb, ft/in)'}]},
      {id:'name', type:'text', label:'Full name', required:true, minLen:2, maxLen:60, autocomplete:'name', reqMsg:'Enter your name.'},
+     {id:'whatsapp', type:'phone', label:'WhatsApp number', help:'So your coach can send you your plan and check in with you.', required:true},
      {id:'age', type:'number', label:'Age', suffix:'years', required:true, integer:true, min:13, max:90, reqMsg:'Enter your age.'},
      {id:'guardianConsent', type:'check', label:'A parent or guardian knows about this program and is okay with it.', short:'Guardian consent', required:true, reqMsg:'Under 18s need a parent or guardian on board. Tick this once they are.', showIf:{f:'age',lt:18}},
      {id:'sex', type:'segmented', label:'Biological sex', help:'Only used to estimate your calorie needs.', required:true, options:[{v:'male',l:'Male'},{v:'female',l:'Female'},{v:'unspecified',l:'Prefer not to say'}]},
@@ -451,13 +487,15 @@ STEPS.forEach((s,si)=>s.sections.forEach(sec=>{
   const key=s.id+'.'+sec.id; SECTION[key]=sec; Object.defineProperty(sec,'_key',{value:key,enumerable:false});
   sec.fields.forEach(f=>{ FIELD[f.id]=f; Object.defineProperty(f,'_sec',{value:sec,enumerable:false}); Object.defineProperty(f,'_step',{value:si,enumerable:false}); });
 }));
-const KEY2FIELD={heightCm:'height',heightFt:'height',heightIn:'height'};
+const KEY2FIELD={heightCm:'height',heightFt:'height',heightIn:'height',waCode:'whatsapp'};
+const waDigits=d=>String(d.whatsapp||'').replace(/[\s\-().]/g,'');
+const waE164=d=>{ const c=String(d.waCode||'').replace(/\s/g,''), n=waDigits(d); return n?(c+(c==='+91'?n.replace(/^0/,''):n)):null; };
 const optLabel=(fid,v)=>{ const f=FIELD[fid]; const o=f&&f.options&&f.options.find(o=>o.v===v); return o?o.l:String(v??''); };
 const itemLabel=(k,v)=>{ const o=FIELD.injuries.item[k].find(o=>o.v===v); return o?o.l:''; };
 
 /* ---------- DATA ---------- */
 function BLANK(){ return {
-  units:'metric', name:'', age:'', guardianConsent:false, sex:null, heightCm:'', heightFt:'', heightIn:'', weight:'', targetWeight:'',
+  units:'metric', name:'', waCode:'+91', whatsapp:'', age:'', guardianConsent:false, sex:null, heightCm:'', heightFt:'', heightIn:'', weight:'', targetWeight:'',
   water:'', diet:null, dietOther:'', meals:null, hasAllergies:null, allergies:[], allergyOther:'', sleep:7, stress:5, activity:null,
   parqHeart:null, heartTypes:[], heartControlled:null, parqChest:null, parqDizzy:null, parqChronic:null, conditions:[], conditionOther:'',
   parqMeds:null, medsList:'', pregnancy:null, parqSupervised:null, hasClearance:null,
@@ -467,7 +505,7 @@ function BLANK(){ return {
   days:null, duration:null, environment:null, homeItems:[], maxDumbbell:'', split:null, confirmed:false
 }; }
 function EXAMPLE(){ return Object.assign(BLANK(),{
-  units:'metric', name:'Aarav Patil (example)', age:'21', sex:'male', heightCm:'176', weight:'81', targetWeight:'76',
+  units:'metric', name:'Aarav Patil (example)', whatsapp:'98765 43210', age:'21', sex:'male', heightCm:'176', weight:'81', targetWeight:'76',
   water:'2', diet:'eggetarian', meals:3, hasAllergies:true, allergies:['lactose'], sleep:6.5, stress:6, activity:'sedentary',
   parqHeart:false, parqChest:false, parqDizzy:false, parqChronic:false, parqMeds:false, parqSupervised:false,
   hasInjuries:true, injuries:[{id:'inj_ex1',area:'knee',side:'left',type:'sprain_strain',when:'y1_3',status:'mostly',pain:2}],
@@ -575,6 +613,14 @@ function validateField(f,d,D,errs){
       return (f.required&&(v===null||v===undefined||v===''))?(f.reqMsg||(f.type==='yesno'?'Answer yes or no.':'Pick one to continue.')):null;
     case 'chips': return (f.required&&!(v||[]).length)?(f.reqMsg||'Pick at least one.'):null;
     case 'check': return (f.required&&!v)?(f.reqMsg||'Tick this to continue.'):null;
+    case 'phone': { const n=waDigits(d), c=String(d.waCode||'').replace(/\s/g,'');
+      if(!n) return f.required?'Enter your WhatsApp number.':null;
+      if(!/^\+\d{1,4}$/.test(c)) return 'The country code should look like +91.';
+      if(n.startsWith('+')) return 'Put the country code in the first box and just the number here.';
+      if(!/^\d+$/.test(n)) return 'Use digits only, like 98765 43210.';
+      if(c==='+91'){ if(!/^[6-9]\d{9}$/.test(n.replace(/^0/,''))) return 'Indian mobile numbers have 10 digits and start with 6, 7, 8 or 9.'; }
+      else if(n.length<6||n.length>14) return 'That number looks too short or too long.';
+      return null; }
     case 'month': { const s=String(v||'').trim();
       if(!s) return f.required?(f.reqMsg||'Pick a month.'):null;
       if(!/^\d{4}-\d{2}$/.test(s)) return 'Use the format YYYY-MM, like 2027-03.';
@@ -670,7 +716,7 @@ function buildOutput(d){
     schemaVersion:SCHEMA,
     profileId:'clt_'+Date.now().toString(36),
     submittedAt:new Date().toISOString(),
-    client:{ name:d.name.trim(), age:num(d.age), biologicalSex:d.sex, guardianConsent:V('guardianConsent')?!!d.guardianConsent:null },
+    client:{ name:d.name.trim(), whatsapp:waE164(d), age:num(d.age), biologicalSex:d.sex, guardianConsent:V('guardianConsent')?!!d.guardianConsent:null },
     preferences:{ units:d.units },
     body:{ heightCm:r1(D.heightCm), weightKg:kg('weight'), targetWeightKg:kg('targetWeight'), bmi:D.bmi, targetBmi:D.targetBmi, changeKg:r1(D.changeKg) },
     lifestyle:{ waterLitresPerDay:r2(D.waterL), diet:{ type:d.diet, details:V('dietOther')?txt(d.dietOther):null }, mealsPerDay:d.meals,
@@ -746,6 +792,7 @@ function renderField(f,d,D){
       inner=lab()+help+`<div class="slider"><input type="range" id="f-${id}" data-key="${id}" min="${f.min}" max="${f.max}" step="${f.step}" value="${esc(v)}" aria-describedby="${desc}"><output id="out-${id}" for="f-${id}">${esc(fmtSlider(f,v))}</output></div>`
         +(f.ends?`<div class="ends" aria-hidden="true"><span>${esc(f.ends[0])}</span><span>${esc(f.ends[1])}</span></div>`:'');
       break;
+    case 'phone': inner=lab()+help+`<div class="phone"><input class="in in-code" id="f-${id}-code" type="text" inputmode="tel" autocomplete="tel-country-code" data-key="waCode" value="${esc(d.waCode)}" aria-label="Country code" aria-describedby="${desc}"${inv}><input class="in" id="f-${id}" type="tel" inputmode="tel" autocomplete="tel-national" data-key="${id}" value="${esc(v)}" placeholder="98765 43210" aria-describedby="${desc}"${inv}></div>`; break;
     case 'check': inner=`<label class="check"><input type="checkbox" id="f-${id}" data-key="${id}"${v?' checked':''} aria-describedby="${desc}"${inv}><span>${esc(f.label)}</span></label>`; break;
     case 'month': { const now=new Date();
       inner=lab()+help+`<input class="in in-s" id="f-${id}" type="month" data-key="${id}" value="${esc(v)}" min="${ym(now,0)}" max="${ym(now,24)}" placeholder="YYYY-MM" aria-describedby="${desc}"${inv}>`; break; }
@@ -779,6 +826,7 @@ function fmtValue(f,d){
     case 'chips': { const a=v||[]; return a.length?a.map(x=>esc(optLabel(f.id,x))).join(', '):null; }
     case 'slider': return esc(fmtSlider(f,v));
     case 'check': return v?'Yes':'No';
+    case 'phone': return v?`${esc(d.waCode)} ${esc(v)}`:null;
     case 'month': return v?esc(fmtMonth(v)):null;
     default: return null;
   }
@@ -811,15 +859,15 @@ function renderReview(d,D){
     +`<div class="sum-grid">${cards}</div>`
     +`<section class="sec"><h3 class="sec-t">Starting numbers</h3><div class="readout">${nums.join('')||'<span>Finish the earlier steps to see these.</span>'}</div><p class="help">Estimates from the Mifflin-St Jeor equation and your daily activity. Your coach adjusts them once training starts.</p></section>`
     +`<section class="sec"><div class="field${state.errors.confirmed?' has-err':''}" data-field="confirmed"><label class="check"><input type="checkbox" id="f-confirmed" data-key="confirmed"${d.confirmed?' checked':''} aria-describedby="err-confirmed"><span>My answers are accurate, and I\u2019ll tell my coach if anything changes, especially injuries or health.</span></label>${errP('confirmed')}</div></section>`
-    +`<div class="nav"><p class="nav-err" role="status"></p><div class="nav-btns"><button type="button" class="btn ghost" data-action="back">Back</button><button type="submit" class="btn primary">Send to Coach Om</button></div></div>`;
+    +`<div class="nav"><p class="nav-err" role="status"></p><div class="nav-btns"><button type="button" class="btn ghost" data-action="back">Back</button><button type="submit" class="btn primary">Send to my coach</button></div></div>`;
 }
 function renderDone(){
   const st=state.sendState, first=esc(String(state.data.name||'').trim().split(/\s+/)[0]||'');
   if(st==='sending') return `<header class="step-head"><p class="eyebrow">Sending</p><h2 id="stepTitle">Sending your answers…</h2><p class="lede">This takes a few seconds. Keep this page open.</p></header>`;
-  if(st==='sent') return `<header class="step-head"><p class="eyebrow">Done · 180 kg on the bar</p><h2 id="stepTitle">You’re all set${first?', '+first:''}</h2><p class="lede">Coach Om has your answers. He’ll go through them and get back to you with your training and nutrition plan.</p></header>`
+  if(st==='sent') return `<header class="step-head"><p class="eyebrow">Done · 180 kg on the bar</p><h2 id="stepTitle">You’re all set${first?', '+first:''}</h2><p class="lede">Your coach has your answers and will get back to you with your training and nutrition plan.</p></header>`
     +`<div class="nav"><p class="nav-err"></p><div class="nav-btns"><button type="button" class="btn ghost" data-action="new">Start a new assessment</button></div></div>`;
   return `<header class="step-head"><p class="eyebrow">Not sent</p><h2 id="stepTitle">Couldn’t send your answers</h2><p class="lede">${esc(state.sendErr||'')}</p></header>`
-    +`<p class="help">Your answers are still saved on this device. If it keeps failing, copy them and send them to Coach Om directly.</p>`
+    +`<p class="help">Your answers are still saved on this device. If it keeps failing, copy them and send them to your coach directly.</p>`
     +`<div class="nav"><p class="nav-err" id="copyMsg" role="status"></p><div class="nav-btns"><button type="button" class="btn ghost" data-action="edit-answers">Edit answers</button><button type="button" class="btn ghost" data-action="copy-answers">Copy my answers</button><button type="button" class="btn primary" data-action="retry-send">Try again</button></div></div>`;
 }
 function renderStep(focusKey){
@@ -872,7 +920,7 @@ function renderRail(){
     return `<li><button type="button" class="st${cur?' cur':''}${done?' done':''}" data-action="goto" data-step="${i}"${reach?'':' disabled'}${cur?' aria-current="step"':''} style="--pc:var(--${PL[i].c})"><span class="st-plate" aria-hidden="true"></span><span>${esc(s.short)}</span><span class="st-kg">${PL[i].kg} kg</span></button></li>`;
   }).join('');
   const started=state.maxStep>0||String(state.data.name||'').trim();
-  $('#draftRow').innerHTML=state.sendState==='sent'?'<span>Answers sent to Coach Om.</span>':started?'<span>Saved in this browser as you go.</span><button type="button" class="link" data-action="restart">Start over</button>':'<span>Answers save in this browser as you go.</span>';
+  $('#draftRow').innerHTML=state.sendState==='sent'?'<span>Answers sent to your coach.</span>':started?'<span>Saved in this browser as you go.</span><button type="button" class="link" data-action="restart">Start over</button>':'<span>Answers save in this browser as you go.</span>';
 }
 
 /* ---------- NAV ---------- */
@@ -948,7 +996,9 @@ function buildRow(o,d){
   const row={
     'Submitted (IST)':new Date(o.submittedAt).toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}),
     'Profile ID':o.profileId,
-    'Name':o.client.name, 'Age':o.client.age, 'Biological sex':L('sex',o.client.biologicalSex), 'Guardian consent':yn(o.client.guardianConsent),
+    'Name':o.client.name,
+    'WhatsApp':o.client.whatsapp||'', 'WhatsApp link':o.client.whatsapp?'https://wa.me/'+o.client.whatsapp.replace(/\D/g,''):'',
+    'Age':o.client.age, 'Biological sex':L('sex',o.client.biologicalSex), 'Guardian consent':yn(o.client.guardianConsent),
     'Units used':d.units==='imperial'?'Imperial':'Metric',
     'Height (cm)':b.heightCm, 'Weight (kg)':b.weightKg, 'Target weight (kg)':b.targetWeightKg, 'BMI':b.bmi, 'Change (kg)':b.changeKg,
     'Water (L/day)':ls.waterLitresPerDay,
@@ -986,7 +1036,7 @@ function buildRow(o,d){
 }
 async function sendToSheet(){
   state.sendState='sending'; state.sendErr=''; renderStep();
-  if(!SHEET_URL){ state.sendState='failed'; state.sendErr='This form isn’t connected to a sheet yet. Coach Om needs to add the sheet link.'; renderStep(); focusTitle(); return; }
+  if(!SHEET_URL){ state.sendState='failed'; state.sendErr='This form isn’t connected to a sheet yet. Your coach needs to add the sheet link.'; renderStep(); focusTitle(); return; }
   const body=JSON.stringify({row:buildRow(state.output,state.data),profile:state.output});
   const opts={method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body};
   let ok=false;
@@ -1008,11 +1058,11 @@ async function sendToSheet(){
 function answersText(){
   const d=state.data, D=derive(d), dec=document.createElement('textarea');
   const plain=h=>{ dec.innerHTML=h; return dec.value; };
-  return 'Coach Om intake: '+String(d.name||'').trim()+'\n'+STEPS.slice(0,-1).map(s=>'\n'+s.short.toUpperCase()+'\n'+summaryRows(s,d,D).map(([k,v])=>`${k}: ${plain(v)}`).join('\n')).join('\n');
+  return 'Coaching intake: '+String(d.name||'').trim()+'\n'+STEPS.slice(0,-1).map(s=>'\n'+s.short.toUpperCase()+'\n'+summaryRows(s,d,D).map(([k,v])=>`${k}: ${plain(v)}`).join('\n')).join('\n');
 }
 function copyAnswers(){
   const msg=$('#copyMsg');
-  const ok=()=>{ msg.className='nav-ok'; msg.textContent='Copied. Paste it into WhatsApp or an email to Coach Om.'; };
+  const ok=()=>{ msg.className='nav-ok'; msg.textContent='Copied. Paste it into WhatsApp or an email to your coach.'; };
   const fail=()=>{ msg.className='nav-err'; msg.textContent='Copying is blocked on this device. Screenshot the review page instead.'; };
   try{ navigator.clipboard.writeText(answersText()).then(ok,fail); }catch(e){ fail(); }
 }
@@ -1034,10 +1084,35 @@ function loadDraft(){
   }catch(e){}
 }
 
+/* ---------- COACH CARD ---------- */
+const COST={3:[36000,45000],6:[72000,90000],12:[144000,180000]};
+const PAIN={guess:'Random programs from YouTube and Instagram, with no plan for how to progress.',
+  stall:'Same weights for months, because nobody adjusts the plan when progress stops.',
+  hurt:'Heavy weights on shaky technique, with nobody checking your form.'};
+const fmtINR=(lo,hi)=>hi>=100000?`\u20b9${+(lo/1e5).toFixed(2)}\u2013${+(hi/1e5).toFixed(2)} lakh`:`\u20b9${lo.toLocaleString('en-IN')}\u2013${hi.toLocaleString('en-IN')}`;
+let costNow=COST[6].slice(), costAnim=0;
+function setMonths(m){
+  document.querySelectorAll('[data-months]').forEach(x=>x.setAttribute('aria-pressed',String(+x.dataset.months===m)));
+  $('#costSub').textContent=`for ${m===12?'a year':m+' months'} of coaching. Most beginners can't pay that.`;
+  const from=costNow.slice(), to=COST[m], el=$('#costNum'); cancelAnimationFrame(costAnim);
+  if(reduceMotion){ costNow=to.slice(); el.textContent=fmtINR(to[0],to[1]); return; }
+  const t0=performance.now(), dur=450;
+  const tick=t=>{ const k=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-k,3);
+    costNow=[0,1].map(i=>Math.round((from[i]+(to[i]-from[i])*e)/1000)*1000);
+    el.textContent=fmtINR(costNow[0],costNow[1]); if(k<1) costAnim=requestAnimationFrame(tick); };
+  costAnim=requestAnimationFrame(tick);
+}
+function setPain(p){
+  document.querySelectorAll('[data-pain]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.pain===p)));
+  const el=$('#painBody'); el.textContent=PAIN[p]; el.classList.remove('swap'); void el.offsetWidth; el.classList.add('swap');
+}
+
 /* ---------- EVENTS ---------- */
 host.addEventListener('submit',e=>{ e.preventDefault(); if(STEPS[state.step].id==='review'){ if(!state.submitted) submit(); } else goNext(); });
 document.addEventListener('click',e=>{
   const b=e.target.closest('button'); if(!b||b.disabled) return;
+  if(b.dataset.months) return setMonths(+b.dataset.months);
+  if(b.dataset.pain) return setPain(b.dataset.pain);
   if(b.dataset.opt) return onOption(b);
   if(b.dataset.injopt) return onInjOpt(b);
   switch(b.dataset.action){
